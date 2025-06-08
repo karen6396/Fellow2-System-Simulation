@@ -1,0 +1,33 @@
+{
+  "id": "announcement-realm",
+  "realm": "announcement-realm",
+  "enabled": true,
+  "users": [
+    {
+      "username": "testuser",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password",
+          "temporary": false
+        }
+      ],
+      "requiredActions": []
+    }
+  ],
+  "clients": [
+    {
+      "clientId": "announcement-client",
+      "enabled": true,
+      "publicClient": true,
+      "directAccessGrantsEnabled": true,
+      "standardFlowEnabled": true,
+      "rootUrl": "http://keycloak:8080",
+      "redirectUris": ["*"],
+      "webOrigins": ["*"],
+      "protocol": "openid-connect"
+    }
+  ]
+}
