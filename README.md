@@ -67,7 +67,6 @@ Before running the app, ensure the following Keycloak setup:
 
 ### 1. Build the App
 
-bash
 mvn clean package
 
 This creates 'target/announcement-service.jar'.
@@ -76,7 +75,6 @@ This creates 'target/announcement-service.jar'.
 
 ### 2. Start with Docker Compose
 
-bash
 docker-compose up --build
 
 Services:
@@ -116,7 +114,6 @@ json
 ## Authentication (Example with CURL)
 
 1. Get token from Keycloak:
-bash
 curl -X POST 'http://localhost:8080/auth/realms/announcement-realm/protocol/openid-connect/token' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'grant_type=password' \
@@ -125,14 +122,12 @@ curl -X POST 'http://localhost:8080/auth/realms/announcement-realm/protocol/open
   -d 'password=<your-password>'
 
 2. Use token to call API:
-bash
 curl -H "Authorization: Bearer <access_token>" http://localhost:8081/api/announcements
 
 ---
 
 ## Clean Up
 
-bash
 docker-compose down
 
 ---
